@@ -1,7 +1,8 @@
-import openai
-
 #Clave API de OpenAI
-openai.api_key = "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"
+import os
+import openai
+openai.api_key = os.getenv("api_key")
+
 #indica que actúe como un analizador de sentimientos
 initialPrompt = """hace de cuenta que sos un analizador de sentimientos. yo te paso sentimientos y vos analizas
                    el sentimiento de los mensaje y me das una respuesta con al menos 1 caracter y un máximo de 4 caracteres
